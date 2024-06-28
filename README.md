@@ -29,3 +29,12 @@ docker compose run --rm -u $UID --workdir //home/gradle/schema-jobs/shared/schem
 docker compose run --rm -u $UID --workdir //home/gradle/schema-jobs/shared/schema \
   gretl -PtopicName=dsbjd_pikettregionen_militaerjustiz -PschemaDirName=schema_pub dropSchema
 ```
+
+```
+docker compose run --rm -u $UID gretl --project-dir=dsbjd_ausgleichsabgabe_pub
+```
+
+
+ch.swisstopo.pixelkarte-farbe
+
+swisstopo erstellt Landeskarten in den Massstäben 1:10`000 bis 1:1 Million. Der Layer Landeskarten (farbig) nutzt die unterschiedlichen Massstäbe und zeigt die geeignetste Karte in Abhängigkeit der gewählten Zoomstufe an. Der Layer Landeskarte (farbig) dient als Hintergrundkarte im Geoportal des Bundes. Er ist auch in den Geodiensten WMS und WMTS verfügbar.
