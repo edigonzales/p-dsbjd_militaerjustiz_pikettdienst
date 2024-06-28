@@ -18,6 +18,14 @@ java -jar /Users/stefan/apps/ili2pg-5.1.0/ili2pg-5.1.0.jar --dbhost localhost --
 java -jar /Users/stefan/apps/ilivalidator-1.14.2/ilivalidator-1.14.2.jar fubar.xtf
 ```
 
-Abteilungen 1 und 4 der Untersuchungsrichterregion 2 mit den Gebieten der Militärpolizeiposten Oensingen, Worblaufen, Thun, Sarnen und Goldau.
 
-Abteilungen 2 und 3 der Untersuchungsrichterregion 2 mit den Gebieten der Militärpolizeiposten Brugg, Kloten, Oberuzwil, Mels und Thusis.
+
+```
+docker compose run --rm -u $UID --workdir //home/gradle/schema-jobs/shared/schema \
+  gretl -PtopicName=dsbjd_pikettregionen_militaerjustiz -PschemaDirName=schema_pub createSchema configureSchema
+```
+
+```
+docker compose run --rm -u $UID --workdir //home/gradle/schema-jobs/shared/schema \
+  gretl -PtopicName=dsbjd_pikettregionen_militaerjustiz -PschemaDirName=schema_pub dropSchema
+```
